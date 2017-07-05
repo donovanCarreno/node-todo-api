@@ -190,7 +190,7 @@ describe('PATCH /todos/:id', () => {
       .end(done)
   })
 
-  it('should not update the todo', (done) => {
+  it('should not update the todo created by other user', (done) => {
     const hexId = todos[0]._id.toHexString()
     const body = {
       text: 'updated todo',
